@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Jagger SF', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #FCF9F2 0%, #FCF9F2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 340px;
+    position: relative;
+    padding-top: 120px;
+}
+
+/* Character Section tiger */
+.character-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+/* tiger size */
+.character {
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Challenge Card */
+.challenge-card {
+    width: 100%;
+    background: linear-gradient(135deg, #2ACE7C 0%, #20B870 100%);
+    border-radius: 30px;
+    padding: 50px 25px 35px 25px;
+    box-shadow: 0 10px 30px rgba(42, 206, 124, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+    z-index: 5;
+}
+
+.challenge-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* Input Group */
+.input-group {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* พิมพ์ขื่อ */
+.challenge-input {
+    flex: 1;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 20px;
+    background-color: #B8E6D5;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+}
+
+.challenge-input::placeholder {
+    color: #666;
+    font-family: 'Kanit', sans-serif;
+}
+
+.challenge-input:focus {
+    outline: none;
+    background-color: #A0DCC8;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Arrow Button */
+.arrow-btn {
+    width: 80px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FFD93D;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 217, 61, 0.3);
+}
+
+.arrow-btn:hover {
+    background-color: #FFEB6B;
+    transform: translateX(3px);
+    box-shadow: 0 6px 15px rgba(255, 217, 61, 0.4);
+}
+
+.arrow-btn:active {
+    transform: translateX(1px);
+}
+
+.arrow-btn svg {
+    width: 24px;
+    height: 24px;
+    color: #2ACE7C;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        padding-top: 100px;
+    }
+
+    .character-wrapper {
+        height: 100px;
+        top: -30px;
+    }
+
+    .challenge-card {
+        padding: 40px 20px 30px 20px;
+        gap: 20px;
+    }
+
+    .challenge-title {
+        font-size: 16px;
+    }
+
+    .challenge-input {
+        border-radius: 30px;
+    padding: 15px 20px;
+    border: none;
+    width: 250px;
+    font-size: 16px;
+    text-align: center;
+    }
+
+    .arrow-btn {
+        width: 45px;
+        height: 45px;
+    }
+
+    .character {
+        max-width: 160px;
+    }
+}
+
+/* Logo Page Styles */
+.logo-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-top: 0;
+}
+/* first page logo size */
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+}
+
+.logo {
+    max-width: 350px;
+    height: auto;
+    object-fit: contain;
+}
+
+.start-button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #FFD93D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2ACE7C;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(255, 217, 61, 0.4);
+}
+
+.start-button:hover {
+    background-color: #FFEB6B;
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(255, 217, 61, 0.5);
+}
+
+.start-button:active {
+    transform: scale(0.98);
+}
+
+.start-button svg {
+    width: 40px;
+    height: 40px;
+    color: #2ACE7C;
+}
+
+@media (max-width: 480px) {
+    .logo-page {
+        gap: 30px;
+    }
+
+    .logo-wrapper {
+        height: 260px;
+    }
+
+    .logo {
+        max-width: 240px;
+    }
+
+    .start-button {
+        width: 70px;
+        height: 70px;
+    }
+
+    .start-button svg {
+        width: 35px;
+        height: 35px;
+    }
+}
